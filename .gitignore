@@ -37,7 +37,16 @@ Thumbs.db
 repo/
 ttt/
 
+# virtual envirionment
+venv
 
+# tensorflow
+*.ckpt
+
+
+# TAC-GAN
+skipthoughts
+flowers
 
 
 

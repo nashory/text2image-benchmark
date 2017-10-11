@@ -192,7 +192,7 @@ class CondGAN(object):
             c_code = tf.tile(c_code, [1, self.s4, self.s4, 1])
 
             # combine both --> s4 * s4 * (ef_dim+gf_dim*4)
-            x_c_code = tf.concat(3, [x_code, c_code])
+            x_c_code = tf.concat([x_code, c_code], 3)
 
             # Joint learning from text and image -->s4 * s4 * gf_dim * 4
             node0 = self.hr_g_joint_img_text(x_c_code)
@@ -263,7 +263,7 @@ class CondGAN(object):
         c_code = tf.expand_dims(tf.expand_dims(c_code, 1), 1)
         c_code = tf.tile(c_code, [1, self.s16, self.s16, 1])  # s16 * s16 * ef_dim
 
-        x_c_code = tf.concat(3, [x_code, c_code])
+        x_c_code = tf.concat([x_code, c_code], 3)
         return self.d_discriminator_template.construct(input=x_c_code)
 
     # hr_d_net
@@ -317,5 +317,5 @@ class CondGAN(object):
         c_code = tf.expand_dims(tf.expand_dims(c_code, 1), 1)
         c_code = tf.tile(c_code, [1, self.s16, self.s16, 1])  # s16 * s16 * ef_dim
 
-        x_c_code = tf.concat(3, [x_code, c_code])
+        x_c_code = tf.concat([x_code, c_code], 3)
         return self.hr_discriminator_template.construct(input=x_c_code)
