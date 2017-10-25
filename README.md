@@ -18,3 +18,11 @@ __Note: The codes in algorithms folder is brought from the respective author's r
 	export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl
 	sudo pip install --upgrade $TF_BINARY_URL
 	~~~
+
+## How to run?
++ StackGAN
+~~~
+. venv/bin/activate
+python demo/birds_skip_thought_demo.py --cfg demo/cfg/birds-skip-thought-demo.yml --gpu 0 --caption_path <your_text_sentences_path>
+~~~
+

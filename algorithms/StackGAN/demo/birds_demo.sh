@@ -2,7 +2,7 @@
 # Extract text embeddings from the encoder
 #
 CUB_ENCODER=lm_sje_nc4_cub_hybrid_gru18_a1_c512_0.00070_1_10_trainvalids.txt_iter30000.t7 \
-CAPTION_PATH=Data/birds/example_captions \
+CAPTION_PATH=Data/birds/action \
 GPU=0 \
 
 export CUDA_VISIBLE_DEVICES=${GPU}

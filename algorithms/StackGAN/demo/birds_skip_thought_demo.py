@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument('--gpu', dest='gpu_id',
                         help='GPU device id to use [0]',
                         default=-1, type=int)
-    parser.add_argument('--caption_path', type=str, default=None,
+    parser.add_argument('--caption_path', type=str, default='./Data/birds/number.txt',
                         help='Path to the file with text sentences')
     # if len(sys.argv) == 1:
     #    parser.print_help()
